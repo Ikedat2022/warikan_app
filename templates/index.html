@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>割り勘アプリ</title>
+</head>
+<body>
+    <h1>割り勘アプリ</h1>
+    <form action="{{ url_for('calculate') }}" method="POST">
+        <p>合計金額：<input type="number" name="totalAmount" required>円</p>
+        <p>人数：<input type="number" name="numberOfPeople" required>人（2人まで）</p>
+        <p>1人が多めに払うパーセンテージ：約<input type="number" name="payMorePercent" value=0 required>%</p>
+        <p>1人が多めに払う金額：約<input type="number" name="payMoreAmount" value=0 required>円多く払う</p>
+        <p><input type="checkbox" name="zakkuriFlag" value="10">10円単位でざっくり計算</p>
+ <!--       <input type="checkbox" name="zakkuriFlag" value="100">100円単位でざっくり計算
+        <input type="checkbox" name="zakkuriFlag" value="1000">1000円単位でざっくり計算</p>-->
+        <input type="submit" value="計算！">
+    </form>
+</body>
+</html>
